@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Happy Birthday Raziya — A special birthday wish with love">
+    <title>Happy Birthday Raziya 🎂</title>
+    
+    <!-- Bootstrap and Custom CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="file/default.css">
+    <link rel="stylesheet" type="text/css" href="file/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="file/loading.css">
+    <link rel="stylesheet" type="text/css" href="file/cake.css">
+
+    <!-- Tree Animation Scripts -->
+    <script type="text/javascript" src="file/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="file/jscex.min.js"></script>
+    <script type="text/javascript" src="file/jscex-parser.js"></script>
+    <script type="text/javascript" src="file/jscex-jit.js"></script>
+    <script type="text/javascript" src="file/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="file/jscex-async.min.js"></script>
+    <script type="text/javascript" src="file/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="file/function.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file/love.js" charset="utf-8"></script>
+</head>
+<body>
+    <!-- Floating Particles Background -->
+    <canvas id="particles-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -99;"></canvas>
+
+    <!-- AUDIO FOR THE FULL EXPERIENCE -->
+    <audio class="song" id="bday-audio" controls loop style="display:none;">
+        <source src="hbd.mp3" type="audio/mp3" />
+    </audio>
+
+    <!-- BALLOONS (R A Z I Y A) -->
+    <div class="balloons text-center" id="b1"><h2 style="color:#F2B300; font-family: 'Great Vibes', cursive;">R</h2></div>
+    <div class="balloons text-center" id="b2"><h2 style="color:#0719D4; font-family: 'Great Vibes', cursive;">A</h2></div>
+    <div class="balloons text-center" id="b3"><h2 style="color:#D14D39; font-family: 'Great Vibes', cursive;">Z</h2></div>
+    <div class="balloons text-center" id="b4"><h2 style="color:#8FAD00; font-family: 'Great Vibes', cursive;">I</h2></div>
+    <div class="balloons text-center" id="b5"><h2 style="color:#8377E4; font-family: 'Great Vibes', cursive;">Y</h2></div>
+    <div class="balloons text-center" id="b6"><h2 style="color:#99C96A; font-family: 'Great Vibes', cursive;">A</h2></div>
+    <img src="file/Balloon-Border.png" width="100%" class="balloon-border">
+
+    <!-- AYUSHARMA LAYER-BY-LAYER EXPERIENCE -->
+    <div class="container" id="ayusharma-container">
+        <!-- Bulbs -->
+        <div class="row">
+            <div class="col-md-2 col-xs-2 bulb-holder"><div class="bulb" id="bulb_yellow"></div></div>
+            <div class="col-md-2 col-xs-2 bulb-holder"><div class="bulb" id="bulb_red"></div></div>
+            <div class="col-md-2 col-xs-2 bulb-holder"><div class="bulb" id="bulb_blue"></div></div>
+            <div class="col-md-2 col-xs-2 bulb-holder"><div class="bulb" id="bulb_green"></div></div>
+            <div class="col-md-2 col-xs-2 bulb-holder"><div class="bulb" id="bulb_pink"></div></div>
+            <div class="col-md-2 col-xs-2 bulb-holder"><div class="bulb" id="bulb_orange"></div></div>
+        </div>
+
+        <!-- Banner -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="file/banner.png" class="bannar">
+            </div>
+        </div>
+
+        <!-- Cake -->
+        <div class="row cake-cover">
+            <div class="col-md-12 text-center">
+                <div class="cake">
+                  <div class="velas">
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                  </div>
+                  <div class="cobertura"></div>
+                  <div class="bizcocho"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Line-by-line Story Message for Raziya -->
+        <div class="row message glass-message">
+            <div class="col-md-12">
+                <p>Hey Raziya...</p>
+                <p>Today is a very special day.</p>
+                <p>A day just for you.</p>
+                <p>Let's take a moment...</p>
+                <p>to celebrate everything that makes you amazing.</p>
+                <p>I wanted to prepare something different for you...</p>
+                <p>Something to make you smile.</p>
+                <p>I made all this...</p>
+                <p>as a birthday present to you.</p>
+                <p>Thanks for being there.</p>
+                <p>Thanks for the beautiful friendship.</p>
+                <p>Thanks for everything.</p>
+                <p>I wish you the absolute best.</p>
+                <p>May your life be filled with joy and ease.</p>
+                <p>May all your dreams come true.</p>
+                <p>Remember,</p>
+                <p>the universe is vast,</p>
+                <p>but there's only one you.</p>
+                <p>Keep shining brightly.</p>
+                <p>And never lose that beautiful smile.</p>
+                <p>So let me wish you one more time...</p>
+                <p>A very Happy Birthday Raziya!</p>
+            </div>
+        </div>
+
+        <!-- Premium Glassmorphism Bottom Navbar -->
+        <div class="navbar navbar-fixed-bottom glass-nav">
+            <div class="row">
+                <div class="col-md-8 text-center col-md-offset-2">
+                    <button class="btn custom-btn" id="turn_on">Turn On Lights</button>
+                    <button class="btn custom-btn" id="play" style="display:none;">Play Music</button>
+                    <button class="btn custom-btn" id="bannar_coming" style="display:none;">Let's Decorate</button>
+                    <button class="btn custom-btn" id="balloons_flying" style="display:none;">Fly With Balloons</button>
+                    <button class="btn custom-btn" id="cake_fadein" style="display:none;">Most Delicious Cake Ever</button>
+                    <button class="btn custom-btn" id="light_candle" style="display:none;">Light Candle</button>
+                    <button class="btn custom-btn" id="wish_message" style="display:none;">Happy Birthday</button>
+                    <button class="btn custom-btn" id="story" style="display:none;">A message for you</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TREE CANVAS EXPERIENCE (Grand Finale) -->
+    <div id="tree-container" style="display: none; opacity: 0; transition: opacity 2s ease-in-out; position: absolute; width: 100%; top: 0; left: 0; z-index: 1000; padding-top: 20px;">
+        <div class="name-banner">
+            <h1>Official Friendship Decree 📜</h1>
+            <div class="subtitle">✨ Subpoena to celebrate your awesomeness ✨</div>
+        </div>
+
+        <div id="main">
+            <div id="wrap">
+                <div id="text">
+                    <div id="code">
+                        <span class="say">IN THE COURT OF INCREDIBLE PEOPLE...</span><br><br>
+                        <span class="say">Be it known that Raziya is officially recognized 👩‍⚖️</span><br>
+                        <span class="say">as an awesome friend.</span><br><br>
+                        <span class="say">This legally binding decree entitles you to:</span><br>
+                        <span class="say">☕ 1. Infinite free coffee deliveries during finals.</span><br>
+                        <span class="say">🗣️ 2. An ear to listen to your rants about cases.</span><br>
+                        <span class="say">🛑 3. One 'Get Out of Jail Free' card (redeemable for any favor).</span><br><br>
+                        <span class="say">Jurisdiction: Our Friendship. Valid in perpetuity. ⚖️❤️</span><br>
+                    </div>
+                </div>
+                <!-- Time elapsed clock hidden for cleaner look -->
+                <canvas id="canvas" width="1100" height="680"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Script -->
+    <script>
+    function createConfetti() {
+        var colors = ['#f9a8d4','#a78bfa','#fbbf24','#34d399','#f472b6','#60a5fa','#fb923c'];
+        var shapes = ['circle','square','triangle'];
+        for (var i = 0; i < 80; i++) {
+            (function(idx) {
+                setTimeout(function() {
+                    var el = document.createElement('div');
+                    el.className = 'confetti-piece';
+                    var color = colors[Math.floor(Math.random() * colors.length)];
+                    var shape = shapes[Math.floor(Math.random() * shapes.length)];
+                    var size = 4 + Math.random() * 8;
+                    el.style.width = size + 'px';
+                    el.style.height = size + 'px';
+                    el.style.backgroundColor = color;
+                    el.style.left = Math.random() * 100 + 'vw';
+                    el.style.top = '-10px';
+                    el.style.animationDuration = (3 + Math.random() * 4) + 's';
+                    el.style.animationDelay = (Math.random() * 2) + 's';
+
+                    if (shape === 'square') { el.style.borderRadius = '2px'; } 
+                    else if (shape === 'triangle') {
+                        el.style.width = '0'; el.style.height = '0';
+                        el.style.backgroundColor = 'transparent';
+                        el.style.borderLeft = (size/2) + 'px solid transparent';
+                        el.style.borderRight = (size/2) + 'px solid transparent';
+                        el.style.borderBottom = size + 'px solid ' + color;
+                    }
+
+                    document.body.appendChild(el);
+                    setTimeout(function() { el.remove(); }, 8000);
+                }, idx * 50);
+            })(i);
+        }
+    }
+    </script>
+
+    <!-- Floating Particles -->
+    <script>
+    (function() {
+        var pCanvas = document.getElementById('particles-canvas');
+        var pCtx = pCanvas.getContext('2d');
+        var particles = [];
+        var particleCount = 60;
+
+        function resizeParticles() {
+            pCanvas.width = window.innerWidth;
+            pCanvas.height = window.innerHeight;
+        }
+        resizeParticles();
+        window.addEventListener('resize', resizeParticles);
+
+        function Particle() {
+            this.x = Math.random() * pCanvas.width;
+            this.y = Math.random() * pCanvas.height;
+            this.size = Math.random() * 3 + 0.5;
+            this.speedX = (Math.random() - 0.5) * 0.5;
+            this.speedY = (Math.random() - 0.5) * 0.5;
+            this.opacity = Math.random() * 0.5 + 0.2;
+            this.pulse = Math.random() * Math.PI * 2;
+            this.color = ['rgba(249,168,212,', 'rgba(167,139,250,', 'rgba(251,191,36,', 'rgba(244,114,182,'][Math.floor(Math.random() * 4)];
+        }
+
+        for (var i = 0; i < particleCount; i++) { particles.push(new Particle()); }
+
+        function animateParticles() {
+            pCtx.clearRect(0, 0, pCanvas.width, pCanvas.height);
+            for (var i = 0; i < particles.length; i++) {
+                var p = particles[i];
+                p.pulse += 0.02;
+                var currentOpacity = p.opacity * (0.6 + 0.4 * Math.sin(p.pulse));
+                pCtx.beginPath();
+                pCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                pCtx.fillStyle = p.color + currentOpacity + ')';
+                pCtx.fill();
+
+                pCtx.beginPath();
+                pCtx.arc(p.x, p.y, p.size * 3, 0, Math.PI * 2);
+                pCtx.fillStyle = p.color + (currentOpacity * 0.15) + ')';
+                pCtx.fill();
+
+                p.x += p.speedX; p.y += p.speedY;
+
+                if (p.x < 0) p.x = pCanvas.width;
+                if (p.x > pCanvas.width) p.x = 0;
+                if (p.y < 0) p.y = pCanvas.height;
+                if (p.y > pCanvas.height) p.y = 0;
+            }
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+    })();
+    </script>
+    
+    <!-- Grand Orchestration Script -->
+    <script src="file/effect.js"></script>
+</body>
+</html>
