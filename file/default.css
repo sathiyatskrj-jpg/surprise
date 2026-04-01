@@ -1,0 +1,424 @@
+/* ============================================
+   Birthday Project for Raziya — Premium Theme
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;600;700&display=swap');
+
+/* ---------- Base Reset & Background ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0d0015 0%, #1a0a2e 25%, #16213e 50%, #0d0015 75%, #1a0025 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: background 2s ease-in-out;
+}
+
+body.lights-on {
+  background: linear-gradient(135deg, #2b0b4a 0%, #4a154b 25%, #702060 50%, #40103b 75%, #2a0035 100%);
+  background-size: 400% 400%;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+a {
+  color: #f9a8d4;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #f472b6;
+}
+
+/* ---------- Name Banner ---------- */
+.name-banner {
+  text-align: center;
+  padding: 20px 10px 5px;
+  position: relative;
+  z-index: 10;
+}
+
+.name-banner h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 52px;
+  background: linear-gradient(90deg, #f9a8d4, #fbbf24, #f472b6, #a78bfa);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s ease infinite;
+  text-shadow: none;
+  filter: drop-shadow(0 0 20px rgba(244, 114, 182, 0.4));
+}
+
+.name-banner .subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: #c4b5fd;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  opacity: 0;
+  animation: fadeSlideUp 1.5s 0.5s forwards;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Main Layout ---------- */
+#main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 1100px;
+  height: 680px;
+  margin-top: 10px;
+}
+
+/* ---------- Text Area (Glassmorphism Card) ---------- */
+#text {
+  width: 420px;
+  height: 850px;
+  left: 60px;
+  top: 40px;
+  position: absolute;
+  z-index: 5;
+}
+
+#code {
+  display: none;
+  background: linear-gradient(135deg, rgba(238, 232, 213, 0.15), rgba(253, 246, 227, 0.1));
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 2px solid rgba(218, 165, 32, 0.6);
+  /* Goldenrod border for official look */
+  border-radius: 12px;
+  padding: 30px 25px;
+  margin-top: 0;
+  line-height: 28px;
+  font-size: 16px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  color: #fff;
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    inset 0 0 40px rgba(218, 165, 32, 0.15);
+  animation: decreeGlow 4s ease-in-out infinite alternate;
+  position: relative;
+}
+
+#code::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  border: 1px double rgba(255, 215, 0, 0.5);
+  /* Inner double border for certificate feel */
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+@keyframes decreeGlow {
+  0% {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(218, 165, 32, 0.15), 0 0 15px rgba(218, 165, 32, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(218, 165, 32, 0.25), 0 0 30px rgba(218, 165, 32, 0.3);
+  }
+}
+
+/* ---------- Clock Box ---------- */
+#clock-box {
+  position: absolute;
+  left: 60px;
+  top: 550px;
+  font-size: 24px;
+  display: none;
+  font-family: 'Outfit', sans-serif;
+}
+
+#clock-box a {
+  font-size: 24px;
+  text-decoration: none;
+}
+
+#clock {
+  margin-left: 48px;
+  color: #c4b5fd;
+}
+
+#clock .digit {
+  font-size: 52px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #f9a8d4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------- Canvas ---------- */
+#canvas {
+  margin: 0 auto;
+  width: 1100px;
+  height: 680px;
+  border-radius: 12px;
+}
+
+/* ---------- Error ---------- */
+#error {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px;
+  display: none;
+}
+
+/* ---------- Utilities ---------- */
+.hand {
+  cursor: pointer;
+}
+
+.say {
+  display: inline-block;
+  margin-left: 2px;
+  padding: 3px 0;
+  font-size: 15.5px;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.3);
+  transition: text-shadow 0.3s;
+}
+
+.say:hover {
+  text-shadow: 0 0 16px rgba(244, 114, 182, 0.6), 0 0 32px rgba(167, 139, 250, 0.3);
+}
+
+.space {
+  margin-right: 150px;
+}
+
+#message-box {
+  position: absolute;
+  margin-top: 450px;
+  font-size: 22px;
+  font-family: 'Outfit', sans-serif;
+  color: #e9d5ff;
+  letter-spacing: 1px;
+}
+
+/* ---------- Floating Particles Overlay ---------- */
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---------- Confetti ---------- */
+.confetti-piece {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 100;
+  animation: confettiFall linear forwards;
+  pointer-events: none;
+}
+
+@keyframes confettiFall {
+  0% {
+    opacity: 1;
+    transform: translateY(-10vh) rotate(0deg) scale(1);
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(110vh) rotate(720deg) scale(0.3);
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+
+  #wrap,
+  #canvas {
+    width: 900px;
+    height: 556px;
+  }
+
+  #text {
+    left: 140px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 960px) {
+
+  #wrap,
+  #canvas {
+    width: 700px;
+    height: 432px;
+  }
+
+  #text {
+    left: 100px;
+    width: 220px;
+  }
+
+  .name-banner h1 {
+    font-size: 40px;
+  }
+
+  #code {
+    padding: 16px 14px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 740px) {
+
+  #wrap,
+  #canvas {
+    width: 100vw;
+    height: 60vw;
+  }
+
+  #text {
+    left: 12%;
+    width: 40%;
+  }
+
+  .name-banner h1 {
+    font-size: 32px;
+  }
+
+  .name-banner .subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  #code {
+    margin-top: 20px;
+    padding: 12px 10px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .say {
+    font-size: 12px;
+  }
+}
+
+/* ---------- Merge Styles & Overrides ---------- */
+.glass-message {
+  background: rgba(13, 0, 21, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.glass-message p {
+  color: #fef3c7;
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(244, 114, 182, 0.3);
+}
+
+.glass-nav {
+  background: rgba(20, 10, 30, 0.7);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 0;
+}
+
+.custom-btn {
+  background: linear-gradient(90deg, #db2777, #9333ea);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 10px 24px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+  box-shadow: 0 4px 15px rgba(219, 39, 119, 0.4);
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+
+.custom-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(219, 39, 119, 0.6);
+  color: #fff;
+}
