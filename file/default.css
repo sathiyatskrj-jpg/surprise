@@ -124,8 +124,7 @@ a:hover {
 #wrap {
   position: relative;
   margin: 0 auto;
-  width: 100%;
-  max-width: 1100px;
+  width: 1100px;
   height: 680px;
   margin-top: 10px;
 }
@@ -217,8 +216,7 @@ a:hover {
 /* ---------- Canvas ---------- */
 #canvas {
   margin: 0 auto;
-  width: 100%;
-  max-width: 1100px;
+  width: 1100px;
   height: 680px;
   border-radius: 12px;
 }
@@ -305,28 +303,30 @@ a:hover {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1200px) {
+
   #wrap,
   #canvas {
-    max-width: 900px;
+    width: 900px;
     height: 556px;
   }
 
   #text {
-    left: 10%;
-    width: 300px;
+    left: 140px;
+    width: 250px;
   }
 }
 
 @media (max-width: 960px) {
+
   #wrap,
   #canvas {
-    max-width: 700px;
+    width: 700px;
     height: 432px;
   }
 
   #text {
-    left: 8%;
-    width: 250px;
+    left: 100px;
+    width: 220px;
   }
 
   .name-banner h1 {
@@ -340,18 +340,17 @@ a:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 740px) {
+
   #wrap,
   #canvas {
     width: 100vw;
-    height: 120vw; /* Taller on mobile to fit the tree */
+    height: 60vw;
   }
 
   #text {
-    left: 5%;
-    width: 90%;
-    position: relative; /* Overlap or stack on mobile */
-    top: 20px;
+    left: 12%;
+    width: 40%;
   }
 
   .name-banner h1 {
@@ -359,47 +358,18 @@ a:hover {
   }
 
   .name-banner .subtitle {
-    font-size: 11px;
-    letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 2px;
   }
 
   #code {
     margin-top: 20px;
-    padding: 20px 15px;
-    font-size: 13px;
-    line-height: 22px;
-    min-height: auto !important; /* Override inline style */
+    padding: 12px 10px;
+    font-size: 12px;
+    line-height: 20px;
   }
 
   .say {
-    font-size: 13px;
-  }
-
-  #signature-box {
-    margin-top: 15px;
-  }
-  
-  #signature-pad {
-    width: 100% !important;
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 480px) {
-  .name-banner h1 {
-    font-size: 28px;
-  }
-
-  .glass-message {
-    padding: 20px;
-  }
-
-  .glass-message p {
-    font-size: 18px;
-  }
-
-  .custom-btn {
-    padding: 8px 16px;
     font-size: 12px;
   }
 }
